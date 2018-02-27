@@ -38,6 +38,13 @@ pyramid(2);
 
 module.exports = pyramid;
 
+// function pyramid(n) {
+//  const createSpace = num => Array(num).fill(' ').join('')
+//  const createPound = num => Array(num).fill('#').join('')
+//  for (let i = 1; i <= n; i++) {
+//   console.log(createSpace(n - i) + createPound(i * 2 - 1) + createSpace(n - i))
+//  }
+// }
 
 
 // function pyramid(n) {
