@@ -8,6 +8,37 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+class Queue {
+ 
+ constructor() {
+  this.data = new Array();
+ }
+
+ add(value) {
+  if (this.data.length === 0) {
+   this.data[0] = value;
+
+   return;
+  }
+  
+  let newArray = [value];
+  
+  for (let i = 0; i < this.data.length; i++) {
+   newArray[i + 1] = this.data[i];
+  }
+  this.data = newArray;
+ }
+
+ remove() {
+  if (this.data.length === 0 ) return undefined;
+  let remove = this.data[this.data.length - 1];
+  this.data.length--;
+  return remove;
+ }
+
+}
+
+let queue = new Queue();
+
 
 module.exports = Queue;
